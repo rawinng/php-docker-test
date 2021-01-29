@@ -1,0 +1,21 @@
+@url = http://localhost:8080
+
+### Query
+GET {{url}}/query HTTP/1.1
+Content-Type: application/json
+Date: {{$datetime rfc1123}}
+
+### Query (405 expected)
+DELETE {{url}}/query HTTP/1.1
+Content-Type: application/json
+Date: {{$datetime rfc1123}}
+
+### Add
+POST {{url}}/add HTTP/1.1
+Content-Type: application/json
+Date: {{$datetime rfc1123}}
+
+{ 
+    "name": "Test {{$randomInt 1 2000000000}}",
+    "price": {{$randomInt 1 290}} 
+}

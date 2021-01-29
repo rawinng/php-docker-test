@@ -15,3 +15,6 @@ Before running the docker-compose command. Checkout if you already have `./datab
 # mkdir database_data
 # docker-compose up -d
 ```
+
+### Test
+Test by REST client plugin on VS Code `TEST.rest`
